@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset = "utf-8">
+  <script src="http://unpkg.com/vue/dist/vue.js"></script>
+  <title>Self Introduction</title>
+  <meta name = "keywords" content = "">
+  <meta name = "description" content = "私の自己紹介をします。">
+  <link href="style.css" rel="stylesheet" media="all">
+  <script src="http://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="http://unpkg.com/element-ui/lib/umd/locale/ja.js"></script>
+</head>
+
+
+<div id="scroll">
+  <a href="#" id="return-top" v-scroll-to="'#top'">Top</a>
+</div>
+
+
+<body>
+  <div id = "wrap">
+  <section id = "suzuki">
+    <h1>鈴木 翔悟 <span class="moji-type slash">/</span><span class="moji-type name">suzuki shougo</span></h1>
+    <p id="lead">始めまして、<strong>趣味でものづくり</strong>をやっている者です。</p>
+    <ul>
+      <li class="more1"><a href = "#inho">情報</a></li>
+      <li class="more2"><a href = "#makes">作品集</a></li>
+    </ul>
+  </section>
+
+  <section id = "inho" class="frame">
+    <h2>○情報</h2>
+      <section class="nframe">
+        <dl>
+          <dt>所属：東京電機大学　情報環境学部</dt>
+            <dd><a v-bind:href="url1" target="_blank">大学ホームページ</a></dd>
+          <dt>mail ：<a href="mailto:16jk138@ms.dendai.ac.jp">16jk138@ms.dendai.ac.jp</a></dt>
+          <dt>活動：図工部・電子回路工作班（廃部間近）</dt>
+        </dl>
+      </section>
+  </section>
+
+  <section id = "makes" class="frame">
+    <h2>○作品集</h2>
+      <ul>
+        <li>３Ｄプリンター</li>
+          <section class="nframe">
+            <h3><span class="moji-type">(左)</span>　iPhoneケース、<span class="moji-type">(右)</span>　V8型エンジン</h3>
+            <p>大学のプリンターはあまり精度がよくなかった。</p>
+            <img src="photo/IMG_0494.JPG" width="320" height="250" alt="iPhone">
+            <img src="photo/V8enjin.jpg" width="320" height="250" alt="V8">
+          </section>
+      </ul>
+      <ul>
+        <li>レーザー加工機</li>
+          <section class="nframe">
+            <h3>標識</h3>
+            <p>大学のレーザー加工機で制作しました。とても精度がよかったです。</p>
+            <img src="photo/IMG_0144.JPG" width="320" height="250" alt="標識">
+          </section>
+      </ul>
+
+      <ul>
+        <li>スケールモデル</li>
+          <section class="nframe">
+            <h3><span class="moji-type">(左)</span>　シナンジュ・スタイン、<span class="moji-type">(中央)</span>　グリーヴァス将軍、<span class="moji-type">(右)</span>　νガンダム</h3>
+            <img src="photo/7.jpg" width="320" height="250" alt="シナンジュ・スタイン">
+            <img src="photo/Gr.jpg" width="320" height="250" alt="グリーヴァス将軍">
+            <img src="photo/Vgan.jpg" width="320" height="250" alt="νガンダム">
+          </section>
+      </ul>
+
+      <ul>
+        <li>電子工作</li>
+          <section class="nframe">
+            <h3>GPS Robot Car</h3>
+            <p>2017-GPS QZSSロボットカーコンテストに参加しました。</p>
+            <p class="more3"><a v-bind:href="url2" target="_blank">大会ホームページ</a></p>
+            <img src="photo/GPScar.jpg" width="320" height="250" alt="ロボットカー">
+            <img src="photo/GPS_QZSS_2017.jpg" width="200" height="250" alt="成績証明書">
+          </section>
+      </ul>
+  </section>
+
+  <p id="Copyright"><small>Copyright&copy;Self Introduction All Rights Reserved.</small></p>
+  </div>
+</body>
+  <script>
+    ELEMENT.locale(ELEMENT.lang.ja)
+    new Vue({
+      el: '#scroll'
+    })
+    new Vue({
+	     el: '#wrap',
+       data: {
+  	      url1: 'https://www.dendai.ac.jp/',
+          url2: 'https://robot-car.jimdo.com/'
+        }
+      })
+  </script>
+</html>
